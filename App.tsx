@@ -1,117 +1,92 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// import React from'react'
+// import {
+//   View,
+//   Text,
+//   SafeAreaView
+// }from 'react-native'
+
+// function App(){
+// return{
+//   <SafeAreaView>
+//   <View>
+//     <Text>
+//       Hello World!</Text>
+//   </View>
+// </SafeAreaView>
+// }
+// }
+// export default App;
+// import React from 'react';
+// import{BrowserRouter as Route, Route,Switch,Link}
+// from 'react-router-dom';
+// import HomePage from '/Homepage';
+// import Otherpage from '/Otherpage';
+// const App=()=>{
+//   return {
+//     <Router>
+//     <Switch>
+//     <Route exact path="/" 
+//     component ={HomePage}/>
+//     component={Otherpage}/>
+//     </Switch>
+//     </Router>
+//   };
+// };
+// import {
+//   View,
+//   Text,
+//   SafeAreaView
+// } from 'react-native';
+
+// function App() {
+//   return (
+//     <SafeAreaView>
+//       <View style ={StyleSheet.container}>
+//         <Text style ={StyleSheet.centredText}>Hello World!</Text>
+       
+//       </View>
+//     </SafeAreaView>
+//   );
+// }
+// const styles = stylesheet.create({
+//   conatiner:{
+//     flex:1,
+//     justifyContent:'centre',
+//     alignitems:'centre',
+//   };
+//   centred Text:{
+//     textAlign:'centre',
+
+//   }
+//   });
+
+// export default App;
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+    <SafeAreaView style={styles.container}>
+      <View>
+        <Text style={styles.centeredText}>Hello World!</Text>
+        <Text style={styles.centeredText}>1In react-native styles for example flex are from top to bottom by default.
+2   Views are similar to div.
+3 SafeAreaView: It is used to avoid the notch. Wrap the entire content in it.
+4 In jsx, a starting tag needs to have an end tag.</Text>
+      </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  centeredText: {
+    textAlign: 'center',
   },
 });
 
